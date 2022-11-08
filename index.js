@@ -1,10 +1,16 @@
-import chalk from 'chalk';
-import  { suma, multiplica }  from "./controller.js";
+class Estudiante{
+  constructor(nombre,asignaturas) {
+        this.nombre=nombre;
+        this.asignaturas=asignaturas;
+    
+   }
+     obtenDatos(){
+        console.log(`Nombre: ${this.nombre}, Asignaturas: ${this.asignaturas}`)
+    };
+};
+const estudiante1 = new Estudiante("Felipe",["HTML","CSS","JAVASCRIPT"])
+estudiante1.obtenDatos()
 
-const result = suma(1,2);
-const result2 = suma(4,5) ;
-
-console.log(chalk.green(multiplica(result,result2)));
 
 
 
