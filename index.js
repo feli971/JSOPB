@@ -1,30 +1,10 @@
-const cuenta = val => {
-    if (val === 20){
-        return val;
-        
-    };
-     throw new Error("El valor es incorrecto. debe ser igual a 20") 
-} 
+import chalk from 'chalk';
+import  { suma, multiplica }  from "./controller.js";
 
-const resultado = cuenta(20);
+const result = suma(1,2);
+const result2 = suma(4,5) ;
 
-try{
-    console.log(`Resultado ejecutado correctamente: ${resultado}`)
-    
-} catch(e){
-    console.log(`No se pudo ejecutar por que: ${e}`)
-} finally{
-    console.log("Ejecución permanente");
-}
-
-    
-
-
-  
-
-
-
-
+console.log(chalk.green(multiplica(result,result2)));
 
 
 
